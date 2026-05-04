@@ -1,0 +1,17 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "Web Testing",
+    "projectPath": "/Users/jeddxdev/Documents/web/Web Testing",
+    "testIds": [],
+    "additionalInstruction": "Test the Todo application including: fetching todos, creating new todos, marking todos as complete/incomplete, and deleting todos. Verify error handling for API failures.",
+    "serverMode": "production",
+    "envs": {
+      "API_KEY": "sk-user-ckr-qZGfRB3nB7lioA18jxgtcmY86HLh6cUCnVOl14gK9QFrrb7AjR_xDuOGbqqvQfTRzP1rJVqkw8vwY_KmIOWbQxa0cGHDIqT7HpekzJT7LNVGvma2JRTlXlQP4PDwNqs"
+    }
+  },
+  "serverPort": 52952
+}

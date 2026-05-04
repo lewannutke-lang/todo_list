@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "text": "Learn Next.js",
+    "completed": false
+  },
+  {
+    "id": "2",
+    "text": "Build a To-Do App",
+    "completed": true
+  },
+  {
+    "id": "1777904441934",
+    "text": "สวัสดีวันจันทร์",
+    "completed": true
+  },
+  {
+    "id": "1777906424718",
+    "text": "Test todo from keyboard",
+    "completed": false
+  },
+  {
+    "id": "1777906453701",
+    "text": "Write automated test",
+    "completed": false
+  },
+  {
+    "id": "1777906464188",
+    "text": "error",
+    "completed": false
+  },
+  {
+    "id": "1777906641899",
+    "text": "trigger-error",
+    "completed": false
+  }
+]

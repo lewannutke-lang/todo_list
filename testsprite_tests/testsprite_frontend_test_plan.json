@@ -1,0 +1,335 @@
+[
+  {
+    "id": "TC001",
+    "title": "Load the current todo list on app start",
+    "description": "This test verifies that opening the app shows a loading state and then displays the current todo list.",
+    "category": "Load todos on app start",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a loading state is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo list is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Add a new todo from the home page",
+    "description": "This test verifies that a user can create a todo from the main page and see the new item appear in the list.",
+    "category": "Create a new todo",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the todo input with a new task description"
+      },
+      {
+        "type": "action",
+        "description": "Submit the new todo"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new todo appears in the list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Delete an existing todo from the list",
+    "description": "This test verifies that a user can remove an existing todo and see it disappear from the list.",
+    "category": "Delete a todo",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo list is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Select a todo for removal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected todo disappears from the list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Mark a todo as complete",
+    "description": "This test verifies that a user can mark an existing todo complete and see the completed state update in the list.",
+    "category": "Update todo completion status",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Select an incomplete todo's completion control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo is shown as completed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Add a new todo by pressing Enter",
+    "description": "This test verifies that a user can create a todo using the keyboard and see the new item appear in the list.",
+    "category": "Create a new todo",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the todo input with a new task description"
+      },
+      {
+        "type": "action",
+        "description": "Press Enter"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new todo appears in the list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Mark a todo as incomplete again",
+    "description": "This test verifies that a user can toggle a completed todo back to incomplete and see the state update in the list.",
+    "category": "Update todo completion status",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Select a completed todo's completion control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo is shown as incomplete"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Handle loading state while todos are being fetched",
+    "description": "This test verifies that the app clears its loading state and renders the list after the initial todo fetch completes.",
+    "category": "Load todos on app start",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a loading state is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the loading state disappears and the todo list is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Reject an empty todo submission",
+    "description": "This test verifies that submitting an empty todo does not add a new item and shows validation feedback.",
+    "category": "Create a new todo",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Leave the todo input empty"
+      },
+      {
+        "type": "action",
+        "description": "Submit the new todo"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no new todo is added"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC009",
+    "title": "See a delete error message when removal fails",
+    "description": "This test verifies that when a todo deletion cannot be completed, an error message appears at the top of the page.",
+    "category": "Delete a todo",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo list is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Select a todo for removal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an error message is displayed at the top of the page"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC010",
+    "title": "Recover after an error by retrying the action",
+    "description": "This test verifies that the app can recover from an error state when the user retries the same action.",
+    "category": "View and retry error states",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo list is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Trigger an operation error through your own action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an error message is displayed at the top of the page"
+      },
+      {
+        "type": "action",
+        "description": "Retry the same action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the app returns to the normal todo list state"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC011",
+    "title": "Reject a whitespace-only todo submission",
+    "description": "This test verifies that submitting whitespace only does not add a new item and shows validation feedback.",
+    "category": "Create a new todo",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the todo input with whitespace only"
+      },
+      {
+        "type": "action",
+        "description": "Submit the new todo"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no new todo is added"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC012",
+    "title": "Retry a failed delete operation",
+    "description": "This test verifies that after a delete error, the user can retry the action and recover successfully.",
+    "category": "View and retry error states",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo list is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Select a todo for removal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an error message is displayed at the top of the page"
+      },
+      {
+        "type": "action",
+        "description": "Retry the delete action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo disappears from the list"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC013",
+    "title": "Show an error banner at the top after a failed operation",
+    "description": "This test verifies that a failed user action surfaces an error message at the top of the page.",
+    "category": "View and retry error states",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the todo list is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Trigger an operation error through your own action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an error message is displayed at the top of the page"
+      }
+    ],
+    "priority": "Medium"
+  }
+]
